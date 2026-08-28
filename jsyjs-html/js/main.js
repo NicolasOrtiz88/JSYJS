@@ -1,4 +1,33 @@
+// Disable automatic browser scroll restoration so page always starts at top
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+if (!window.location.hash) {
+  window.scrollTo(0, 0);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Ensure top position on load if no specific anchor hash
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+
+  // Smooth scroll to top when clicking Logo or 'Inicio'
+  const homeLinks = document.querySelectorAll('a[href="index.html"], a[href="#inicio"], .logo');
+  homeLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') || window.location.pathname === '';
+      const href = link.getAttribute('href');
+      if (isIndex && (href === 'index.html' || href === '#inicio' || link.classList.contains('logo'))) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname + window.location.search);
+        }
+      }
+    });
+  });
   /* ─── STICKY HEADER ─── */
   const header = document.getElementById('header');
   
@@ -408,7 +437,13 @@ function initVideoCarousel() {
     thumbCards.forEach((card, i) => {
       if (i === index) {
         card.classList.add('active');
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        // Only scroll the carousel track horizontally if user triggered video change or autoplay
+        if (shouldAutoplay) {
+          const trackRect = thumbsTrack.getBoundingClientRect();
+          const cardRect = card.getBoundingClientRect();
+          const offset = (cardRect.left - trackRect.left) + thumbsTrack.scrollLeft - (thumbsTrack.clientWidth / 2) + (card.clientWidth / 2);
+          thumbsTrack.scrollTo({ left: offset, behavior: 'smooth' });
+        }
       } else {
         card.classList.remove('active');
       }
