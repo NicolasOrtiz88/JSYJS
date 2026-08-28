@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Trabaja con Nosotros - JS&JS Apoyo Logístico</title>
+    <meta name="description" content="Únete al equipo de JS&JS Apoyo Logístico. Contratación formal, crecimiento profesional y un ambiente de trabajo que valora tu talento.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ─── HEADER ─── -->
+    <header id="header" class="header">
+        <div class="container header-container">
+            <!-- Logo (Alineado a la izquierda) -->
+            <a href="index.html" class="logo" title="JS&JS Apoyo Logístico">
+                <img src="img/logo.webp" alt="JS&JS Apoyo Logístico" style="height: 48px; width: auto;">
+            </a>
+            
+            <!-- Desktop Nav (Centrado y perfectamente balanceado) -->
+            <nav class="desktop-nav">
+                <a href="index.html">Inicio</a>
+
+                <!-- Quiénes Somos Dropdown -->
+                <div class="nav-dropdown">
+                    <a href="quienes-somos.html" class="nav-dropdown-trigger">
+                        Quiénes Somos <i data-lucide="chevron-down" style="width:14px;height:14px;transition:transform 0.3s;"></i>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <div class="nav-dropdown-content">
+                            <a href="quienes-somos.html#quienes-somos" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="building-2" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Quiénes Somos</span>
+                                    <span class="nav-dropdown-desc">Conoce nuestra empresa</span>
+                                </div>
+                            </a>
+                            <a href="quienes-somos.html#historia" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="clock" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Nuestra Historia</span>
+                                    <span class="nav-dropdown-desc">20+ años de trayectoria</span>
+                                </div>
+                            </a>
+                            <a href="quienes-somos.html#mision-vision" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="target" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Misión y Visión</span>
+                                    <span class="nav-dropdown-desc">Nuestro propósito</span>
+                                </div>
+                            </a>
+                            <a href="quienes-somos.html#valores" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="heart-handshake" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Valores Corporativos</span>
+                                    <span class="nav-dropdown-desc">Principios que nos guían</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicios Dropdown -->
+                <div class="nav-dropdown">
+                    <a href="index.html#servicios" class="nav-dropdown-trigger">
+                        Servicios <i data-lucide="chevron-down" style="width:14px;height:14px;transition:transform 0.3s;"></i>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <div class="nav-dropdown-content">
+                            <a href="index.html#servicios" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="truck" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Cargue y Descargue</span>
+                                    <span class="nav-dropdown-desc">Operación ágil y segura</span>
+                                </div>
+                            </a>
+                            <a href="index.html#servicios" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="layers" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Operación de Montacargas</span>
+                                    <span class="nav-dropdown-desc">Personal certificado</span>
+                                </div>
+                            </a>
+                            <a href="index.html#servicios" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="package-check" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Picking y Packing</span>
+                                    <span class="nav-dropdown-desc">Alistamiento y precisión</span>
+                                </div>
+                            </a>
+                            <a href="index.html#servicios" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="thermometer-snowflake" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Cuartos Fríos</span>
+                                    <span class="nav-dropdown-desc">Conservación térmica</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nuestros Clientes -->
+                <a href="nuestros-clientes.html">Nuestros Clientes</a>
+
+                <!-- Trabaja con Nosotros Dropdown (Active) -->
+                <div class="nav-dropdown">
+                    <a href="trabaja-con-nosotros.html" class="nav-dropdown-trigger active">
+                        Trabaja con Nosotros <i data-lucide="chevron-down" style="width:14px;height:14px;transition:transform 0.3s;"></i>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <div class="nav-dropdown-content">
+                            <a href="#por-que" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="sparkles" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">¿Por qué ser parte?</span>
+                                    <span class="nav-dropdown-desc">Beneficios de nuestro equipo</span>
+                                </div>
+                            </a>
+                            <a href="#que-encontraras" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="search" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">¿Qué encontrarás?</span>
+                                    <span class="nav-dropdown-desc">Ambiente y oportunidades</span>
+                                </div>
+                            </a>
+                            <a href="#formulario" class="nav-dropdown-item">
+                                <div class="nav-dropdown-icon"><i data-lucide="file-text" style="width:18px;height:18px;"></i></div>
+                                <div>
+                                    <span class="nav-dropdown-title">Formulario de Inscripción</span>
+                                    <span class="nav-dropdown-desc">Postúlate ahora</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Desktop Actions (Alineado a la derecha) -->
+            <div class="header-actions">
+                <a href="tel:3208330917" class="phone-link" title="Llamar a JS&JS">
+                    <i data-lucide="phone" style="width:16px;height:16px;"></i>
+                    320 833 0917
+                </a>
+                <a href="https://wa.me/573208330917?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n" target="_blank" class="btn btn-accent" style="padding: 10px 20px; font-weight: 700; border-radius: 10px;">
+                    Cotizar <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ─── MOBILE MENU ─── -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <button id="close-menu-btn" aria-label="Cerrar menú">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Inicio</a>
+            <div class="mobile-accordion">
+                <button class="mobile-accordion-trigger">
+                    Quiénes Somos <i data-lucide="chevron-down" style="width:16px;height:16px;transition:transform 0.3s;"></i>
+                </button>
+                <div class="mobile-accordion-content">
+                    <a href="quienes-somos.html#quienes-somos" class="mobile-nav-sublink">Quiénes Somos</a>
+                    <a href="quienes-somos.html#historia" class="mobile-nav-sublink">Nuestra Historia</a>
+                    <a href="quienes-somos.html#mision-vision" class="mobile-nav-sublink">Misión y Visión</a>
+                    <a href="quienes-somos.html#valores" class="mobile-nav-sublink">Valores Corporativos</a>
+                </div>
+            </div>
+            <a href="nuestros-clientes.html" class="mobile-nav-link">Nuestros Clientes</a>
+            <div class="mobile-accordion active">
+                <button class="mobile-accordion-trigger">
+                    Trabaja con Nosotros <i data-lucide="chevron-down" style="width:16px;height:16px;transition:transform 0.3s;"></i>
+                </button>
+                <div class="mobile-accordion-content" style="max-height: 300px;">
+                    <a href="#por-que" class="mobile-nav-sublink">¿Por qué ser parte?</a>
+                    <a href="#que-encontraras" class="mobile-nav-sublink">¿Qué encontrarás?</a>
+                    <a href="#formulario" class="mobile-nav-sublink">Formulario de Inscripción</a>
+                </div>
+            </div>
+            <a href="index.html#proceso" class="mobile-nav-link">Procesos Destacados</a>
+            <a href="index.html#servicios" class="mobile-nav-link">Nuestros Servicios</a>
+            <a href="contacto.html" class="mobile-nav-link">Contáctanos</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="tel:3208330917" class="btn btn-outline">
+                <i data-lucide="phone" style="width:18px;height:18px;"></i> Llamar ahora
+            </a>
+            <a href="contacto.html" class="btn btn-accent">Solicitar Cotización</a>
+        </div>
+    </div>
+
+    <style>
+        /* Sub-Navigation Bar */
+        .sub-nav { position: sticky; top: var(--header-height); background: #fff; border-bottom: 1px solid var(--color-border); z-index: 50; }
+        .sub-nav-inner { display: flex; gap: 24px; padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .sub-nav-link { display: flex; align-items: center; gap: 6px; padding: 12px 0; font-size: 0.85rem; font-weight: 500; color: var(--color-text-muted); white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.3s; }
+        .sub-nav-link:hover { color: var(--color-text-primary); }
+        .sub-nav-link.active { color: var(--color-primary); border-bottom-color: var(--color-accent); font-weight: 600; }
+
+        /* Page Hero */
+        .page-hero { padding: calc(var(--header-height) + 20px) 0 36px; background: linear-gradient(135deg, var(--color-primary), #051222); color: #fff; position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(circle, rgba(0,200,83,0.08) 0%, transparent 70%); }
+        .page-hero h1 { color: #fff; }
+        .page-hero p { color: rgba(255,255,255,0.8); }
+
+        /* Benefit Card */
+        .benefit-card {
+            background: #fff; border: 1px solid var(--color-border); border-radius: 12px;
+            padding: 20px; transition: all 0.3s; text-align: center; position: relative; overflow: hidden;
+        }
+        .benefit-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(10,31,61,0.08); border-color: var(--color-accent); }
+        .benefit-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--color-accent); transform: scaleX(0); transition: transform 0.3s; }
+        .benefit-card:hover::after { transform: scaleX(1); }
+
+        /* Experience Cards */
+        .experience-card {
+            background: linear-gradient(135deg, var(--color-primary), #142F5C);
+            border-radius: 16px; padding: 28px; color: #fff; position: relative; overflow: hidden;
+        }
+        .experience-card::before { content: ''; position: absolute; top: -40px; right: -40px; width: 100px; height: 100px; background: rgba(0,200,83,0.1); border-radius: 50%; }
+
+        /* Form styles */
+        .form-group { margin-bottom: 14px; }
+        .form-label { display: block; font-size: 0.825rem; font-weight: 600; margin-bottom: 4px; color: var(--color-text-primary); }
+        .form-input, .form-select, .form-textarea {
+            width: 100%; padding: 10px 14px; border: 1px solid var(--color-border);
+            border-radius: 8px; font-family: inherit; font-size: 0.95rem;
+            transition: all 0.3s; background: #fff; color: var(--color-text-primary);
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none; border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(0,200,83,0.15);
+        }
+        .form-textarea { resize: vertical; min-height: 90px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        @media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } }
+    </style>
+
+    <!-- ─── PAGE HERO ─── -->
+    <main>
+        <section class="page-hero">
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="reveal" style="max-width: 700px;">
+                    <span class="text-label" style="display:inline-block; padding: 4px 14px; background:rgba(0,200,83,0.15); border-radius:20px; margin-bottom:12px;">ÚNETE A NUESTRO EQUIPO</span>
+                    <h1 class="text-display" style="margin-bottom: 16px;">Trabaja con <span class="text-accent">nosotros</span></h1>
+                    <p style="font-size: 1.15rem; max-width: 600px; margin: 0;">Buscamos personas comprometidas, con ganas de crecer y que quieran ser parte de una empresa que valora su talento. ¡Conoce lo que tenemos para ti!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── SUB-NAVIGATION ─── -->
+        <nav class="sub-nav">
+            <div class="container">
+                <div class="sub-nav-inner">
+                    <a href="#por-que" class="sub-nav-link active">
+                        <i data-lucide="sparkles" style="width:15px;height:15px;"></i> ¿Por qué ser parte?
+                    </a>
+                    <a href="#que-encontraras" class="sub-nav-link">
+                        <i data-lucide="gift" style="width:15px;height:15px;"></i> ¿Qué encontrarás?
+                    </a>
+                    <a href="#formulario" class="sub-nav-link">
+                        <i data-lucide="file-text" style="width:15px;height:15px;"></i> Formulario de Inscripción
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ─── CONSTRUYE TU FUTURO (POR QUÉ) ─── -->
+        <section class="section" id="por-que">
+            <div class="container">
+                <div class="grid grid-cols-2 items-center" style="gap: 28px;">
+                    <div class="reveal reveal-left" style="display: flex; flex-direction: column; gap: 14px;">
+                        <span class="text-label" style="display:inline-block; padding: 4px 14px; background:var(--color-accent-soft); border-radius:20px; align-self: flex-start;">SÉ PARTE DE NUESTRO EQUIPO</span>
+                        <h2 class="text-h2" style="margin-bottom: 0;">Construye tu futuro con JSYJS</h2>
+                        
+                        <p style="font-size:0.95rem; color:var(--color-text-secondary); line-height:1.6; margin: 0;">En <strong>JSYJS Prestación de Servicios S.A.S.</strong> creemos que el éxito de nuestra empresa comienza con las personas que hacen parte de ella. Buscamos colaboradores comprometidos, responsables y apasionados por hacer las cosas bien.</p>
+                        
+                        <p style="font-size:0.95rem; color:var(--color-text-secondary); line-height:1.6; margin: 0;">Cada integrante de nuestro equipo aporta al cumplimiento de nuestro propósito: brindar soluciones operativas y logísticas que generen valor para nuestros clientes.</p>
+
+                        <div style="background:var(--color-surface-alt); padding:20px 24px; border-radius:14px; border:1px solid var(--color-border); margin-top: 4px;">
+                            <h3 style="font-size:1.05rem; font-weight:700; margin-bottom:12px; color:var(--color-primary);">En JSYJS encontrarás mucho más que un empleo:</h3>
+                            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;">
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <i data-lucide="check-circle-2" style="width:16px;height:16px; color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Un ambiente laboral basado en el respeto y la confianza.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <i data-lucide="check-circle-2" style="width:16px;height:16px; color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Oportunidades de aprendizaje y desarrollo profesional.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <i data-lucide="check-circle-2" style="width:16px;height:16px; color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Estabilidad y cumplimiento de nuestras obligaciones laborales.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <i data-lucide="check-circle-2" style="width:16px;height:16px; color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Reconocimiento al compromiso y al buen desempeño.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <i data-lucide="check-circle-2" style="width:16px;height:16px; color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Trabajo en equipo y apoyo permanente.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <i data-lucide="check-circle-2" style="width:16px;height:16px; color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Participación en proyectos con empresas líderes.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-top: 8px;">
+                            <a href="https://wa.me/573208330917?text=Hola,%20me%20gustar%C3%ADa%20enviar%20mi%20hoja%20de%20vida" target="_blank" class="btn btn-accent" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;">Enviar hoja de vida <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal reveal-right" style="border-radius: 18px; overflow: hidden; box-shadow: 0 16px 36px rgba(10,31,61,0.12); height: 100%;">
+                        <img src="img/equipo-trabajo.jpg" alt="Construye tu futuro con JSYJS" style="width: 100%; height: 100%; object-fit: cover; min-height: 440px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── ¿QUÉ ENCONTRARÁS EN JS&JS? ─── -->
+        <section class="section section-alt" id="que-encontraras">
+            <div class="container">
+                <div class="grid grid-cols-2 items-center" style="gap: 28px;">
+                    <div class="reveal reveal-left" style="border-radius: 18px; overflow: hidden; box-shadow: 0 16px 36px rgba(10,31,61,0.12); height: 100%;">
+                        <img src="img/equipo-jsyjs.png" alt="Qué encontrarás en JS&JS" style="width: 100%; height: 100%; object-fit: cover; min-height: 440px;">
+                    </div>
+                    
+                    <div class="reveal reveal-right" style="display: flex; flex-direction: column; gap: 14px;">
+                        <span class="text-label" style="display:inline-block; padding: 4px 14px; background:#fff; border: 1px solid var(--color-border); border-radius:20px; align-self: flex-start;">EXPERIENCIA DE TRABAJO</span>
+                        <h2 class="text-h2" style="margin-bottom: 0;">¿Qué encontrarás en JS&JS?</h2>
+                        
+                        <div style="background:#fff; padding:20px 24px; border-radius:14px; border:1px solid var(--color-border); box-shadow: 0 8px 24px rgba(10,31,61,0.04);">
+                            <h3 style="font-size:1.05rem; font-weight:700; margin-bottom:12px; color:var(--color-primary);">Aquí encontrarás:</h3>
+                            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;">
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <div style="width:20px; height:20px; background:var(--color-accent-soft); color:var(--color-accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.75rem; font-weight:700;">1</div>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Un equipo humano que trabaja con honestidad y respeto.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <div style="width:20px; height:20px; background:var(--color-accent-soft); color:var(--color-accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.75rem; font-weight:700;">2</div>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Liderazgo cercano y comunicación abierta.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <div style="width:20px; height:20px; background:var(--color-accent-soft); color:var(--color-accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.75rem; font-weight:700;">3</div>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Espacios para proponer ideas y mejorar los procesos.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <div style="width:20px; height:20px; background:var(--color-accent-soft); color:var(--color-accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.75rem; font-weight:700;">4</div>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Procesos claros y organizados.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <div style="width:20px; height:20px; background:var(--color-accent-soft); color:var(--color-accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.75rem; font-weight:700;">5</div>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Seguridad, bienestar y responsabilidad en cada labor.</span>
+                                </li>
+                                <li style="display:flex; align-items:flex-start; gap:10px;">
+                                    <div style="width:20px; height:20px; background:var(--color-accent-soft); color:var(--color-accent); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.75rem; font-weight:700;">6</div>
+                                    <span style="font-size:0.875rem; color:var(--color-text-secondary);">Crecimiento junto a una empresa que apuesta por la calidad.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p style="font-size:0.95rem; color:var(--color-text-secondary); line-height:1.6; margin: 0;">En nuestra organización cada persona es valorada por su talento, compromiso y actitud. En JSYJS creemos que las grandes empresas se construyen con grandes personas. <strong>Si compartes nuestros valores, queremos conocerte.</strong></p>
+                        
+                        <div style="margin-top: 8px;">
+                            <a href="https://wa.me/573208330917?text=Hola,%20me%20gustar%C3%ADa%20enviar%20mi%20hoja%20de%20vida" target="_blank" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;">Enviar hoja de vida <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── FORMULARIO DE INSCRIPCIÓN ─── -->
+        <section class="section" id="formulario">
+            <div class="container">
+                <div class="grid grid-cols-2" style="gap: 32px;" class="items-center">
+                    <div class="reveal reveal-left">
+                        <span class="text-label" style="display:inline-block; padding: 4px 14px; background:var(--color-accent-soft); border-radius:20px; margin-bottom:12px;">POSTÚLATE</span>
+                        <h2 class="text-h2" style="margin-bottom: 16px;">Formulario de Inscripción</h2>
+                        <p style="font-size:1.05rem; margin-bottom:20px;">Completa el formulario con tus datos y nos pondremos en contacto contigo. ¡Queremos conocerte!</p>
+                        
+                        <div style="display:flex; flex-direction:column; gap:14px;">
+                            <div style="display:flex; align-items:center; gap:14px; padding:16px 20px; background:var(--color-surface-alt); border-radius:12px;">
+                                <div style="width:40px; height:40px; background:var(--color-accent-soft); color:var(--color-accent); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                    <i data-lucide="clock" style="width:20px;height:20px;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size:0.925rem; font-weight:600; margin-bottom:2px;">Respuesta rápida</h4>
+                                    <p style="font-size:0.825rem; color:var(--color-text-muted); margin:0;">Te contactaremos en las próximas 48 horas hábiles.</p>
+                                </div>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:14px; padding:16px 20px; background:var(--color-surface-alt); border-radius:12px;">
+                                <div style="width:40px; height:40px; background:var(--color-accent-soft); color:var(--color-accent); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                    <i data-lucide="lock" style="width:20px;height:20px;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size:0.925rem; font-weight:600; margin-bottom:2px;">Datos protegidos</h4>
+                                    <p style="font-size:0.825rem; color:var(--color-text-muted); margin:0;">Tu información es confidencial y se usará solo para el proceso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal reveal-right">
+                        <div style="background:#fff; border:1px solid var(--color-border); border-radius:18px; padding:28px 32px; box-shadow: 0 12px 30px rgba(10,31,61,0.06);">
+                            <form id="inscription-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="nombre">Nombre completo *</label>
+                                        <input type="text" id="nombre" class="form-input" placeholder="Tu nombre completo" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="cedula">Número de cédula *</label>
+                                        <input type="text" id="cedula" class="form-input" placeholder="Tu número de cédula" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="telefono">Teléfono *</label>
+                                        <input type="tel" id="telefono" class="form-input" placeholder="Tu número de celular" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Correo electrónico</label>
+                                        <input type="email" id="email" class="form-input" placeholder="tu@correo.com">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="ciudad">Ciudad de residencia *</label>
+                                    <select id="ciudad" class="form-select" required>
+                                        <option value="">Selecciona tu ciudad</option>
+                                        <option value="mosquera">Mosquera</option>
+                                        <option value="madrid">Madrid</option>
+                                        <option value="bogota">Bogotá</option>
+                                        <option value="funza">Funza</option>
+                                        <option value="facatativa">Facatativá</option>
+                                        <option value="medellin">Medellín</option>
+                                        <option value="otra">Otra</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="cargo">Cargo de interés *</label>
+                                    <select id="cargo" class="form-select" required>
+                                        <option value="">¿En qué área te gustaría trabajar?</option>
+                                        <option value="auxiliar-bodega">Auxiliar de bodega</option>
+                                        <option value="operario-montacargas">Operario de montacargas</option>
+                                        <option value="auxiliar-picking">Auxiliar de picking y packing</option>
+                                        <option value="auxiliar-transporte">Auxiliar de transporte</option>
+                                        <option value="operario-maquilas">Operario de maquilas</option>
+                                        <option value="supervisor">Supervisor operativo</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="experiencia">Experiencia laboral relevante</label>
+                                    <textarea id="experiencia" class="form-textarea" placeholder="Describe brevemente tu experiencia en logística o bodega (opcional)"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-accent" style="width:100%; padding:14px; font-size:1rem; font-weight:700;">
+                                    Enviar mi postulación <i data-lucide="send" style="width:16px;height:16px;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── CTA ─── -->
+        <section class="section section-alt" style="background: linear-gradient(135deg, var(--color-primary), #051222); color: #fff; padding: 48px 0;">
+            <div class="container text-center reveal">
+                <h2 class="text-h2" style="color: #fff; margin-bottom: 16px;">¿Tienes preguntas sobre el proceso?</h2>
+                <p style="font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width:600px; margin:0 auto 28px;">Escríbenos por WhatsApp y resolveremos todas tus dudas sobre vacantes disponibles, requisitos y selección.</p>
+                <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+                    <a href="https://wa.me/573208330917?text=Hola,%20estoy%20interesado%20en%20trabajar%20con%20JS%26JS" target="_blank" class="btn btn-accent" style="padding: 14px 28px; font-weight: 700;"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Escríbenos por WhatsApp</a>
+                    <a href="tel:3208330917" class="btn btn-outline-white" style="padding: 14px 28px; font-weight: 700;"><i data-lucide="phone" style="width:16px;height:16px;"></i> Llamar ahora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="section section-dark" style="background-color: var(--color-primary); padding-top: 48px; padding-bottom: 28px; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; margin-bottom: 36px;">
+                <!-- Column 1: Newsletter -->
+                <div class="footer-col">
+                    <h4 style="color: #fff; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px;">SUSCRÍBETE Y NOS PONDREMOS EN CONTACTO</h4>
+                    <form class="newsletter-form" style="position: relative; max-width: 400px;">
+                        <input type="email" placeholder="Correo electrónico" style="width: 100%; padding: 14px 48px 14px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-size: 0.95rem; outline: none; transition: all 0.3s;" required>
+                        <button type="submit" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: transparent; border: none; color: rgba(255,255,255,0.6); cursor: pointer; padding: 8px; transition: color 0.3s;">
+                            <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+                        </button>
+                    </form>
+                    <style>
+                        .newsletter-form input:focus { border-color: var(--color-accent); background: rgba(255,255,255,0.08); }
+                        .newsletter-form button:hover { color: var(--color-accent); }
+                    </style>
+                </div>
+                
+                <!-- Column 2: Links -->
+                <div class="footer-col">
+                    <h4 style="color: #fff; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px;">JSYJS S.A.S.</h4>
+                    <ul class="footer-links" style="display:flex; flex-direction:column; gap:16px;">
+                        <li><a href="index.html#servicios" style="color:rgba(255,255,255,0.7); font-size:0.95rem; transition: color 0.3s; text-decoration: none;">Nuestros Servicios</a></li>
+                        <li><a href="quienes-somos.html" style="color:rgba(255,255,255,0.7); font-size:0.95rem; transition: color 0.3s; text-decoration: none;">Quiénes Somos</a></li>
+                        <li><a href="quienes-somos.html#historia" style="color:rgba(255,255,255,0.7); font-size:0.95rem; transition: color 0.3s; text-decoration: none;">Nuestra Historia</a></li>
+                        <li><a href="#" style="color:rgba(255,255,255,0.7); font-size:0.95rem; transition: color 0.3s; text-decoration: none;">Política de calidad</a></li>
+                        <li><a href="#" style="color:rgba(255,255,255,0.7); font-size:0.95rem; transition: color 0.3s; text-decoration: none;">Política de tratamiento de datos</a></li>
+                    </ul>
+                    <style>
+                        .footer-links a:hover { color: var(--color-accent) !important; }
+                    </style>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col">
+                    <h4 style="color: #fff; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 24px;">CONTÁCTANOS</h4>
+                    <ul class="footer-contact" style="display:flex; flex-direction:column; gap:16px;">
+                        <li><a href="https://wa.me/573208330917" target="_blank" style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.7); font-size:0.95rem; text-decoration: none; transition: color 0.3s;"><i data-lucide="message-circle" style="width:16px;height:16px;color:var(--color-accent);"></i> 57 320 833 0917</a></li>
+                        <li><a href="tel:3208330917" style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.7); font-size:0.95rem; text-decoration: none; transition: color 0.3s;"><i data-lucide="phone" style="width:16px;height:16px;color:var(--color-accent);"></i> 320 833 0917</a></li>
+                        <li><a href="mailto:gerencia@jsapoyologistico.com" style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.7); font-size:0.95rem; text-decoration: none; transition: color 0.3s;"><i data-lucide="mail" style="width:16px;height:16px;color:var(--color-accent);"></i> gerencia@jsapoyologistico.com</a></li>
+                        <li style="display:flex; align-items:flex-start; gap:12px; color:rgba(255,255,255,0.7); font-size:0.95rem; line-height: 1.5;"><i data-lucide="map-pin" style="width:16px;height:16px;color:var(--color-accent); flex-shrink:0; margin-top: 4px;"></i> Carrera 10 # 7b - 20<br>Mosquera, Cundinamarca</li>
+                    </ul>
+                    <style>
+                        .footer-contact a:hover { color: #fff !important; }
+                    </style>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px; text-align: center; color: rgba(255,255,255,0.4); font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                <p>Copyright JSYJS S.A.S. - 2026. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; padding: 12px 24px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px; box-shadow: 0 -4px 12px rgba(0,0,0,0.05); z-index: 9999;">
+        <p style="color: var(--color-text-primary); font-size: 0.85rem; margin: 0; text-align: center;">Al navegar por este sitio aceptas el uso de cookies para agilizar tu experiencia.</p>
+        <button id="accept-cookies" style="background: transparent; border: 1px solid var(--color-text-primary); color: var(--color-text-primary); padding: 6px 16px; font-size: 0.75rem; font-weight: 600; cursor: pointer; text-transform: uppercase; transition: all 0.3s;">Entendido</button>
+    </div>
+
+    <!-- ─── FLOATING ACTIONS (WHATSAPP & SCROLL TO TOP) ─── -->
+    <div class="floating-actions">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/573208330917?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20log%C3%ADsticos" target="_blank" class="floating-btn whatsapp-float-btn" aria-label="Escríbenos por WhatsApp">
+            <span class="float-tooltip">¡Escríbenos por WhatsApp!</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28" fill="currentColor">
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            </svg>
+        </a>
+
+        <!-- Scroll To Top Button -->
+        <button id="scroll-to-top" class="floating-btn scroll-to-top-btn" aria-label="Volver arriba">
+            <i data-lucide="arrow-up" style="width: 22px; height: 22px;"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        document.getElementById('accept-cookies').addEventListener('click', function() {
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    </script>
+    <script src="js/scroll-reveal.js"></script>
+</body>
+</html>

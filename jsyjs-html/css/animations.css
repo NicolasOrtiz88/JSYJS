@@ -1,0 +1,40 @@
+/* ============================================================
+   JS&JS Apoyo Logístico - Animations
+   ============================================================ */
+
+/* Initial state for elements that will be revealed */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.reveal-left {
+  transform: translateX(-30px);
+}
+
+.reveal.reveal-right {
+  transform: translateX(30px);
+}
+
+/* State when element becomes visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* Staggered delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
